@@ -5,6 +5,7 @@
 
 .brdr {
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 #full_box {
@@ -21,6 +22,11 @@
     text-align: center;
     margin-bottom: 40px;
     font-weight: 700;
+    color: #FF5300;
+}
+
+.acdn span {
+    color: black;
 }
 
 .bg-pink {
