@@ -6,10 +6,11 @@ let box = document.querySelector("#box");
 let text = document.querySelector(".txt");
 let icon = document.querySelector("#svg");
 
-full_box.addEventListener("click", () => {
-    box.classList.toggle("active");
 
-})
+// full_box.addEventListener("click", () => {
+//     full_box.classList.toggle("active");
+
+// });
 
 acord_item.style.display = "block";
 icon.style.transform = "rotate(180deg)";
@@ -32,17 +33,15 @@ acord_items.forEach(element => {
             }
         });
 
-
-        if (num === 0) {
+        let disp_prop = window.getComputedStyle(text).display;
+        if (disp_prop === "block") {
             text.style.display = "none";
             icon.style.transform = "rotate(0deg)";
-            box.classList.remove("active");
             num = 1;
         } else {
             text.style.display = "block";
             icon.style.transform = "rotate(180deg)";
             num = 0;
-            box.classList.add("active");
         }
     });
 });
